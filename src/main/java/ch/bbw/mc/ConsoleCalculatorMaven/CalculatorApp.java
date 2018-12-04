@@ -20,5 +20,6 @@ public class CalculatorApp
         valueA = 10;
         valueB = 20;
         System.out.println("Summe " + valueA + " + " + valueB + " = " + calculator.summe(valueA, valueB));
+
     }
 }
