@@ -15,4 +15,9 @@ public class CalculatorTest {
 		assertTrue(testee.summe(10, 20) == 30);
 	}
 
+	@Test
+	public void subtractionPositivNumbersTestOk(){
+		testee = new Calculator();
+		assertTrue(testee.subtraktion(30, 20) == 10);
+	}
 }
