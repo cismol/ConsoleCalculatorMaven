@@ -29,6 +29,11 @@ public class CalculatorTest {
 	public void summNegativAndPositivNumberTestOk(){
 		assertTrue(testee.summe(-10, 20) == 10);
 	}
+	
+	@Test
+	public void summPositivAndNegativNumberTestOk(){
+		assertTrue(testee.summe(10, -20) == -10);
+	}
 
 	@Test
 	public void subtractionPositivNumbersTestOk(){
