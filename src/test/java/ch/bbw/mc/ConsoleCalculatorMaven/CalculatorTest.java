@@ -146,9 +146,10 @@ public class CalculatorTest {
 		assertTrue(testee.subtraktion(Integer.MIN_VALUE, 10) == Integer.MIN_VALUE - 10);
 	}
 	
-	
-	
-	
+	@Test
+	public void subtractionMinValueAndNegativNumberTestOk(){
+		assertTrue(testee.subtraktion(Integer.MIN_VALUE, -10) == Integer.MIN_VALUE + 10);
+	}	
 	
 	@Test(expected=ArithmeticException.class)
 	public void divisionExpectedExceptionTest() {
