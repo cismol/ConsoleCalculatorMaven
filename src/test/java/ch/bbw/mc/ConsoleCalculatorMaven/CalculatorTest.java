@@ -40,4 +40,9 @@ public class CalculatorTest {
 	public void multiplicationPositivNumbersTestOk(){
 		assertTrue(testee.multiplication(3, 2) == 6);
 	}
+	
+	@Test
+	public void multiplicationSummTestOk(){
+		assertTrue(testee.multiplicateSumm(3, 2, 3) == 15);
+	}
 }
