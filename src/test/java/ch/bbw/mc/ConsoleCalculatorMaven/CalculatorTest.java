@@ -35,4 +35,24 @@ public class CalculatorTest {
 	    throws ArithmeticException {
 		assertTrue(testee.division(10, 2) == 5);
 	}
+	
+	@Test
+	public void multiplicationPositivNumbersTestOk(){
+		assertTrue(testee.multiplication(3, 2) == 6);
+	}
+	
+	@Test
+	public void multiplicationSummTestOk(){
+		assertTrue(testee.multiplicateSumm(3, 2, 3) == 15);
+	}
+	
+	@Test(expected=ArithmeticException.class)
+	public void multiplicateDivisionExpectedExceptionTest() {
+	    assertTrue(testee.multiplicateDivision(10, 0, 3) == 15);
+	}
+	
+	public void multiplicateDivisionNotExpectedExceptionTest() 
+		    throws ArithmeticException {
+	    assertTrue(testee.multiplicateDivision(10, 2, 3) == 15);
+	}
 }
