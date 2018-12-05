@@ -64,6 +64,11 @@ public class CalculatorTest {
 	public void summMinValueAndZeroTestOk(){
 		assertTrue(testee.summe(Integer.MIN_VALUE, 0) == Integer.MIN_VALUE);
 	}
+	
+	@Test
+	public void summMinValueAndPositivNumberTestOk(){
+		assertTrue(testee.summe(Integer.MIN_VALUE, 10) == Integer.MIN_VALUE + 10);
+	}
 
 	@Test
 	public void subtractionPositivNumbersTestOk(){
