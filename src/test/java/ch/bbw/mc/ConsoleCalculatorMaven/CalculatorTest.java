@@ -96,7 +96,10 @@ public class CalculatorTest {
 		assertTrue(testee.subtraktion(-20, -10) == -10);
 	}
 	
-	
+	@Test
+	public void subtractionPositivandNegativNumbersTestOk(){
+		assertTrue(testee.subtraktion(30, -20) == 50);
+	}
 	
 	
 	
