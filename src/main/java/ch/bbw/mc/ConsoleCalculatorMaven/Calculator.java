@@ -20,4 +20,8 @@ public class Calculator {
 	public int subtraktion(int summand1, int summand2){
 		return summand1 - summand2;
 	}
+	
+	public int division(int dividend1, int dividend2){
+		return dividend1 / dividend2;
+	}
 }
