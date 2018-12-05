@@ -80,10 +80,22 @@ public class CalculatorTest {
 		assertTrue(testee.summe(Integer.MIN_VALUE, -10) == Integer.MIN_VALUE - 10);
 	}
 
+	//Subtraction
 	@Test
 	public void subtractionPositivNumbersTestOk(){
 		assertTrue(testee.subtraktion(30, 20) == 10);
 	}
+	
+	@Test
+	public void subtractionNegativNumbersTestOk(){
+		assertTrue(testee.subtraktion(-10, -20) == 10);
+	}
+	
+	
+	
+	
+	
+	
 	
 	@Test(expected=ArithmeticException.class)
 	public void divisionExpectedExceptionTest() {
