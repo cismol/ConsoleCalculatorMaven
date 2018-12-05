@@ -29,4 +29,10 @@ public class CalculatorTest {
 	public void divisionExpectedExceptionTest() {
 	    assertTrue(testee.division(10, 0) == 5);
 	}
+	
+	@Test
+	public void divisionNotExpectedExceptionTest() 
+	    throws ArithmeticException {
+		assertTrue(testee.division(10, 2) == 5);
+	}
 }
