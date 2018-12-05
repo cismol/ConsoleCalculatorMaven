@@ -1,5 +1,7 @@
 package ch.bbw.mc.ConsoleCalculatorMaven;
 
+import java.lang.reflect.Method;
+
 /**
  *  Calculator
  *  - Kann 2 Zahlen addieren
@@ -33,13 +35,11 @@ public class Calculator {
 		return (multiplicant1 + multiplicant2) * multiplicant3;
 	}
 	
-	private int multiplicateDivision(int dividand1, int dividand2, int multiplicant1){
+	
+	protected int multiplicateDivision(int dividand1, int dividand2, int multiplicant1){
 		int multiplicateDivisionResult;
 		return multiplicateDivisionResult = (dividand1 / dividand2) * multiplicant1;
 	}
-	
-	public int getMultiplicateDivision(int multiplicateDivisionResult){
-		return multiplicateDivisionResult;
-	}
+
 	
 }
