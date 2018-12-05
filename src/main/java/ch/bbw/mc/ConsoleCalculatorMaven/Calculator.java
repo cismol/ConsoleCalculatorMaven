@@ -29,6 +29,10 @@ public class Calculator {
 		return multiplicant1 * multiplicant2;
 	}
 	
+	protected int multiplicateSumm(int multiplicant1, int multiplicant2, int multiplicant3){
+		return (multiplicant1 + multiplicant2) * multiplicant3;
+	}
+	
 	
 	
 }
