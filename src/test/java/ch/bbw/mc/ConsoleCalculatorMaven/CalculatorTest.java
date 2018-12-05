@@ -80,10 +80,76 @@ public class CalculatorTest {
 		assertTrue(testee.summe(Integer.MIN_VALUE, -10) == Integer.MIN_VALUE - 10);
 	}
 
+	//Subtraction
 	@Test
 	public void subtractionPositivNumbersTestOk(){
 		assertTrue(testee.subtraktion(30, 20) == 10);
 	}
+	
+	@Test
+	public void subtractionNegativNumbersTestOk(){
+		assertTrue(testee.subtraktion(-10, -20) == 10);
+	}
+	
+	@Test
+	public void subtractionNegativNumbers2TestOk(){
+		assertTrue(testee.subtraktion(-20, -10) == -10);
+	}
+	
+	@Test
+	public void subtractionPositivAndNegativNumbersTestOk(){
+		assertTrue(testee.subtraktion(30, -20) == 50);
+	}
+	
+	@Test
+	public void subtractionNegativAndPositivNumbersTestOk(){
+		assertTrue(testee.subtraktion(-30, 20) == -50);
+	}
+	
+	@Test
+	public void subtractionNegativNumbersAndZeroTestOk(){
+		assertTrue(testee.subtraktion(-30, 0) == -30);
+	}
+	
+	@Test
+	public void subtractionPositivNumbersAndZeroTestOk(){
+		assertTrue(testee.subtraktion(30, 0) == 30);
+	}
+	
+	@Test
+	public void subtractionZeroAndZeroTestOk(){
+		assertTrue(testee.subtraktion(0, 0) == 0);
+	}
+	
+	@Test
+	public void subtractionMaxValueAndZeroTestOk(){
+		assertTrue(testee.subtraktion(Integer.MAX_VALUE, 0) == Integer.MAX_VALUE);
+	}
+	
+	@Test
+	public void subtractionMaxValueAndPositivNumberTestOk(){
+		assertTrue(testee.subtraktion(Integer.MAX_VALUE, 10) == Integer.MAX_VALUE - 10);
+	}
+	
+	@Test
+	public void subtractionMaxValueAndNegaitvNumberTestOk(){
+		assertTrue(testee.subtraktion(Integer.MAX_VALUE, -10) == Integer.MAX_VALUE + 10);
+	}
+	
+	@Test
+	public void subtractionMinValueAndZeroTestOk(){
+		assertTrue(testee.subtraktion(Integer.MIN_VALUE, 0) == Integer.MIN_VALUE);
+	}
+	
+	@Test
+	public void subtractionMinValueAndPositivNumberTestOk(){
+		assertTrue(testee.subtraktion(Integer.MIN_VALUE, 10) == Integer.MIN_VALUE - 10);
+	}
+	
+	@Test
+	public void subtractionMinValueAndNegativNumberTestOk(){
+		assertTrue(testee.subtraktion(Integer.MIN_VALUE, -10) == Integer.MIN_VALUE + 10);
+	}	
 	
 	@Test(expected=ArithmeticException.class)
 	public void divisionExpectedExceptionTest() {
