@@ -19,6 +19,66 @@ public class CalculatorTest {
 	public void summPositivNumbersTestOk(){
 		assertTrue(testee.summe(10, 20) == 30);
 	}
+	
+	@Test
+	public void summNegativNumbersTestOk(){
+		assertTrue(testee.summe(-10, -20) == -30);
+	}
+	
+	@Test
+	public void summNegativAndPositivNumberTestOk(){
+		assertTrue(testee.summe(-10, 20) == 10);
+	}
+	
+	@Test
+	public void summPositivAndNegativNumberTestOk(){
+		assertTrue(testee.summe(10, -20) == -10);
+	}
+	
+	@Test
+	public void summPositivNumberAndZeroTestOk(){
+		assertTrue(testee.summe(10, 0) == 10);
+	}
+	
+	@Test
+	public void summNegativNumberAndZeroTestOk(){
+		assertTrue(testee.summe(-10, 0) == -10);
+	}
+	
+	@Test
+	public void summZeroAndZeroTestOk(){
+		assertTrue(testee.summe(0, 0) == 0);
+	}
+	
+	@Test
+	public void summMaxValueAndZeroTestOk(){
+		assertTrue(testee.summe(Integer.MAX_VALUE, 0) == Integer.MAX_VALUE);
+	}
+	
+	@Test
+	public void summMaxValueAndPositivNumberTestOk(){
+		assertTrue(testee.summe(Integer.MAX_VALUE, 10) == Integer.MAX_VALUE + 10);
+	}
+	
+	@Test
+	public void summMaxValueAndNegativNumberTestOk(){
+		assertTrue(testee.summe(Integer.MAX_VALUE, -10) == Integer.MAX_VALUE - 10);
+	}
+	
+	@Test
+	public void summMinValueAndZeroTestOk(){
+		assertTrue(testee.summe(Integer.MIN_VALUE, 0) == Integer.MIN_VALUE);
+	}
+	
+	@Test
+	public void summMinValueAndPositivNumberTestOk(){
+		assertTrue(testee.summe(Integer.MIN_VALUE, 10) == Integer.MIN_VALUE + 10);
+	}
+	
+	@Test
+	public void summMinValueAndNegativNumberTestOk(){
+		assertTrue(testee.summe(Integer.MIN_VALUE, -10) == Integer.MIN_VALUE - 10);
+	}
 
 	@Test
 	public void subtractionPositivNumbersTestOk(){
