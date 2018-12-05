@@ -35,4 +35,9 @@ public class CalculatorTest {
 	    throws ArithmeticException {
 		assertTrue(testee.division(10, 2) == 5);
 	}
+	
+	@Test
+	public void multiplicationPositivNumbersTestOk(){
+		assertTrue(testee.multiplication(3, 2) == 6);
+	}
 }
