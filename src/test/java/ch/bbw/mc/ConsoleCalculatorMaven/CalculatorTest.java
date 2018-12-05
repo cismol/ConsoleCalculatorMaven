@@ -50,4 +50,9 @@ public class CalculatorTest {
 	public void multiplicateDivisionExpectedExceptionTest() {
 	    assertTrue(testee.multiplicateDivision(10, 0, 3) == 15);
 	}
+	
+	public void multiplicateDivisionNotExpectedExceptionTest() 
+		    throws ArithmeticException {
+	    assertTrue(testee.multiplicateDivision(10, 2, 3) == 15);
+	}
 }
