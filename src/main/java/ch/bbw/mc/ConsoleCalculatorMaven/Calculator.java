@@ -33,6 +33,8 @@ public class Calculator {
 		return (multiplicant1 + multiplicant2) * multiplicant3;
 	}
 	
-	
+	private int multiplicateDivision(int dividand1, int dividand2, int multiplicant1){
+		return (dividand1 / dividand2) * multiplicant1;
+	}
 	
 }
