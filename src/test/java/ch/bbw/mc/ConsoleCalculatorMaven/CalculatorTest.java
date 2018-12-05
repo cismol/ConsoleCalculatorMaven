@@ -24,4 +24,9 @@ public class CalculatorTest {
 	public void subtractionPositivNumbersTestOk(){
 		assertTrue(testee.subtraktion(30, 20) == 10);
 	}
+	
+	@Test(expected=ArithmeticException.class)
+	public void divisionExpectedExceptionTest() {
+	    assertTrue(testee.division(10, 0) == 5);
+	}
 }
