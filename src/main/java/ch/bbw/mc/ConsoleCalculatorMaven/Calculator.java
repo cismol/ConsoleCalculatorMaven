@@ -37,8 +37,7 @@ public class Calculator {
 	
 	
 	protected int multiplicateDivision(int dividand1, int dividand2, int multiplicant1){
-		int multiplicateDivisionResult;
-		return multiplicateDivisionResult = (dividand1 / dividand2) * multiplicant1;
+		return (dividand1 / dividand2) * multiplicant1;
 	}
 
 	

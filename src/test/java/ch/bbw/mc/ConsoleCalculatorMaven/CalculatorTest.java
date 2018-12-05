@@ -45,4 +45,9 @@ public class CalculatorTest {
 	public void multiplicationSummTestOk(){
 		assertTrue(testee.multiplicateSumm(3, 2, 3) == 15);
 	}
+	
+	@Test(expected=ArithmeticException.class)
+	public void multiplicateDivisionExpectedExceptionTest() {
+	    assertTrue(testee.multiplicateDivision(10, 0, 3) == 15);
+	}
 }
