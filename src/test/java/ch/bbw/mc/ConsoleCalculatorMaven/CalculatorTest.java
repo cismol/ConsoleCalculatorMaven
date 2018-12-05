@@ -126,6 +126,11 @@ public class CalculatorTest {
 		assertTrue(testee.subtraktion(Integer.MAX_VALUE, 0) == Integer.MAX_VALUE);
 	}
 	
+	@Test
+	public void subtractionMaxValueAndPositivNumberTestOk(){
+		assertTrue(testee.subtraktion(Integer.MAX_VALUE, 10) == Integer.MAX_VALUE - 10);
+	}
+	
 	
 	
 	
