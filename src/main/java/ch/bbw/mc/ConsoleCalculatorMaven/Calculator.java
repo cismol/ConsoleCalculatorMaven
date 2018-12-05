@@ -24,4 +24,11 @@ public class Calculator {
 	public int division(int dividend1, int dividend2){
 		return dividend1 / dividend2;
 	}
+	
+	protected int multiplication(int multiplicant1, int multiplicant2){
+		return multiplicant1 * multiplicant2;
+	}
+	
+	
+	
 }
