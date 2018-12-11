@@ -194,6 +194,11 @@ public class CalculatorTest {
 	}
 	
 	@Test
+	public void multiplicationZeroAndZeroTestOk(){
+		assertTrue(testee.multiplication(0, 0) == 0);
+	}
+	
+	@Test
 	public void multiplicationSummTestOk(){
 		assertTrue(testee.multiplicateSumm(3, 2, 3) == 15);
 	}
