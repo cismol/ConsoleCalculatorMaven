@@ -174,6 +174,11 @@ public class CalculatorTest {
 	}
 	
 	@Test
+	public void multiplicationNegativAndPositivNumberTestOk(){
+		assertTrue(testee.multiplication(-3, 2) == -6);
+	}
+	
+	@Test
 	public void multiplicationSummTestOk(){
 		assertTrue(testee.multiplicateSumm(3, 2, 3) == 15);
 	}
