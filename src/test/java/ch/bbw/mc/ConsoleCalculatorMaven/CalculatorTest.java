@@ -162,9 +162,50 @@ public class CalculatorTest {
 		assertTrue(testee.division(10, 2) == 5);
 	}
 	
+	//Multiplikation
 	@Test
 	public void multiplicationPositivNumbersTestOk(){
 		assertTrue(testee.multiplication(3, 2) == 6);
+	}
+	
+	@Test
+	public void multiplicationPositivAndNegativNumberTestOk(){
+		assertTrue(testee.multiplication(3, -2) == -6);
+	}
+	
+	@Test
+	public void multiplicationNegativAndPositivNumberTestOk(){
+		assertTrue(testee.multiplication(-3, 2) == -6);
+	}
+	
+	@Test
+	public void multiplicationNegativNumbersTestOk(){
+		assertTrue(testee.multiplication(-3, -2) == 6);
+	}
+	
+	@Test
+	public void multiplicationZeroAndPositivNumberTestOk(){
+		assertTrue(testee.multiplication(0, 2) == 0);
+	}
+	
+	@Test
+	public void multiplicationZeroAndNegativNumberTestOk(){
+		assertTrue(testee.multiplication(0, -2) == 0);
+	}
+	
+	@Test
+	public void multiplicationZeroAndZeroTestOk(){
+		assertTrue(testee.multiplication(0, 0) == 0);
+	}
+	
+	@Test
+	public void multiplicationOneAndPositivNumberTestOk(){
+		assertTrue(testee.multiplication(1, 2) == 2);
+	}
+	
+	@Test
+	public void multiplicationOneAndNegativNumberTestOk(){
+		assertTrue(testee.multiplication(1, -2) == -2);
 	}
 	
 	@Test
