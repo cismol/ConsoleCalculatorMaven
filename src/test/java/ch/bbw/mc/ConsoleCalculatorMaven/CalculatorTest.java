@@ -162,9 +162,15 @@ public class CalculatorTest {
 		assertTrue(testee.division(10, 2) == 5);
 	}
 	
+	//Multiplikation
 	@Test
 	public void multiplicationPositivNumbersTestOk(){
 		assertTrue(testee.multiplication(3, 2) == 6);
+	}
+	
+	@Test
+	public void multiplicationPositivAndNegativNumberTestOk(){
+		assertTrue(testee.multiplication(3, -2) == -6);
 	}
 	
 	@Test
