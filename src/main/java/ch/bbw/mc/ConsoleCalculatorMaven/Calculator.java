@@ -35,10 +35,11 @@ public class Calculator {
 		return (multiplicant1 + multiplicant2) * multiplicant3;
 	}
 	
-	
 	protected int multiplicateDivision(int dividand1, int dividand2, int multiplicant1){
 		return (dividand1 / dividand2) * multiplicant1;
 	}
 
+	//Es ist möglich private Funktionen zu testen, jedoch extrem aufwendig, 
+	//wesshalb ich es hier nicht tun werde.
 	
 }
