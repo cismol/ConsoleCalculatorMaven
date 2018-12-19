@@ -1,15 +1,13 @@
 language: java
-rvm:
- - 2.2
- - jruby
- before_deploy:
-      # Set up git user name and tag this commit
+sudo: false
+script: mvn install
+before_deploy:
       - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
       - git tag $TRAVIS_TAG
-    deploy:
-      provider: releases
-      api_key: "GITHUB OAUTH TOKEN"
-      file: "FILE TO UPLOAD"
-      skip_cleanup: true
-      on:
-        tags: true
+deploy:
+  provider: releases
+  api_key:
+    secure: DPcXAzdjSQSlFx+OH19nPm3Wd5KQgxWU+jKhxE7buyPtpPyJ4Zr+pqRG7C1l0/EIDo3Rvb3aiHKVIUrUeV90/ob5HPttGK3xzkJTYEgnAOhGhjDDjhwSjkm9wZcVK/+jSqPTAHNC5oFmR93HnQshbY0Gmbt/dAFvAC48hf8ddFCZLoU/tGnfaASh6FzuTdbZ6Bb/EeRzybzGUVgl5YJFZPU1Z0HSnvkT3vJQ3tkjl8AvL1JD3WhGb5yn+bYmN530YgsQGb6LBJZQMIysb4fZyB4ox0SPG0kv+2JkAFrtqzDJmWh6LfBLxfwlrqeuWOeLKlx8ISgrLcx2o/ex2XQOn5XyVhLV1A865ak+ut2lQfPu0OAAkswZAJe8+HzxzKYPQqZ9HMa41puA1Sq4nUcKIXAGVWDbYWS8xPwipOIteXKMPQsIVslLN/L2q1ATxfJX3xku3vHdqCY1zINHY+sIlPiXPM50sg0Y5woDGPP4qr/C/KVzfphNT0gPCR6/HugvicvOVQfF0mxJiH6NrIscX3zAOGh5kqR+Q4yBWNF9IW7GxVKALrtXdK3ceZ9SiabKhzyv8RcQ6DgkmPYD3hBHuKx4TuCZX9xekBg8ffDh38VMMHkSbZUUJTT0zwc/95dXsKnpCOOZnlJZ7zKfwi6h7w1zxc94o0ziAcnuPLP9Hzk=
+  file: "/home/travis/.m2/repository/ch/bbw/mc/426_ConsoleCalculatorMaven/0.0.1-SNAPSHOT/426_ConsoleCalculatorMaven-0.0.1-SNAPSHOT.jar"
+  on:
+    repo: cismol/ConsoleCalculatorMaven
